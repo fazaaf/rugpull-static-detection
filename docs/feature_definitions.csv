@@ -1,0 +1,30 @@
+feature,group,definition,method
+total_vulnerabilities,slither_count,Number of Slither findings: all Slither findings,Slither JSON output
+high_severity,slither_count,Number of Slither findings: impact High,Slither JSON output
+medium_severity,slither_count,Number of Slither findings: impact Medium,Slither JSON output
+low_severity,slither_count,Number of Slither findings: impact Low,Slither JSON output
+informational,slither_count,Number of Slither findings: impact Informational,Slither JSON output
+optimization,slither_count,Number of Slither findings: impact Optimization,Slither JSON output
+has_assembly,slither_flag,1 if triggered: detector 'assembly',Slither JSON output
+has_low_level_calls,slither_flag,1 if triggered: detector 'low-level-calls',Slither JSON output
+has_dead_code,slither_flag,1 if triggered: detector 'dead-code',Slither JSON output
+has_shadowing,slither_flag,1 if triggered: detector 'shadowing-local',Slither JSON output
+has_costly_loop,slither_flag,1 if triggered: detector 'costly-loop',Slither JSON output
+has_reentrancy,slither_flag,1 if triggered: any detector name containing 'reentrancy',Slither JSON output
+has_mint,regex_flag,1 if the pattern matches the lower-cased source,regex: \bmint\b|\b_mint\b|\bminttoken\b
+has_blacklist,regex_flag,1 if the pattern matches the lower-cased source,regex: \bblacklist\b|\bblocklist\b|\bblocked\b
+has_pause,regex_flag,1 if the pattern matches the lower-cased source,regex: \bpause\b|\bpaused\b|\bunpause\b
+has_selfdestruct,regex_flag,1 if the pattern matches the lower-cased source,regex: \bselfdestruct\b|\bsuicide\b
+has_owner_only,regex_flag,1 if the pattern matches the lower-cased source,regex: \bonlyowner\b|\brequire.*owner\b
+has_fee_modifier,regex_flag,1 if the pattern matches the lower-cased source,regex: \btaxfee\b|\bliquidityfee\b|\b_taxfee\b|\bsetfee\b
+has_max_tx,regex_flag,1 if the pattern matches the lower-cased source,regex: \bmaxtxamount\b|\b_maxtx\b|\bmaxwallet\b
+has_whitelist,regex_flag,1 if the pattern matches the lower-cased source,regex: \bwhitelist\b|\bexcluded\b|\b_isexcluded\b
+has_transfer_lock,regex_flag,1 if the pattern matches the lower-cased source,regex: \blocktime\b|\btimelock\b|\blocked\b
+has_proxy,regex_flag,1 if the pattern matches the lower-cased source,regex: \bdelegatecall\b|\bproxy\b|\bupgradeable\b
+has_renounce,regex_flag,1 if the pattern matches the lower-cased source,regex: \brenounceownership\b
+has_burn,regex_flag,1 if the pattern matches the lower-cased source,regex: \bburn\b|\b_burn\b|\bburntoken\b
+func_count,structural,Number of matches in the lower-cased source,regex: \bfunction\b
+modifier_count,structural,Number of matches in the lower-cased source,regex: \bmodifier\b
+event_count,structural,Number of matches in the lower-cased source,regex: \bevent\b
+require_count,structural,Number of matches in the lower-cased source,regex: \brequire\b
+code_length,structural,Length of the lower-cased concatenated source (characters),len(source)
