@@ -25,7 +25,7 @@ The study asks whether features computed only from verified source code separate
 - **Rug pull**: contract listed in the rug pull dataset of Sun et al. (2024) or in the ground truth of CRPWarner (Lin et al., 2024).
 - **Legitimate**: token from the CoinGecko token list (retrieved October 2026) that appears in neither source and shows at least 365 days between its first and last recorded transfer. This does **not** mean the token is verified safe.
 
-The rug pull class has 2,372 addresses: 2,302 listed in the Ethereum entries of the dataset of Sun et al. (2024), 68 listed in the CRPWarner ground truth (one address appears in both), and 3 further addresses whose origin is still being documented.
+The rug pull class has 2,372 addresses: 2,302 from the Ethereum entries of the dataset of Sun et al. (2024), 68 from the CRPWarner ground truth (one address appears in both), and three addresses of undocumented origin. All three lacked verified source code and were excluded at the first filtering step.
 
 ## Software
 
