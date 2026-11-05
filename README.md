@@ -9,7 +9,7 @@ The study asks whether features computed only from verified source code separate
 | Path | Description |
 |---|---|
 | `data/D_single_era_matched.csv` | Primary dataset: 2,278 single-file ERC-20 contracts (1,864 rug pull, 414 legitimate). Columns: `address`, `label` (1 = rug pull, 0 = legitimate), `source_kind`, `is_proxy` (1 = implementation contract of a proxy was analysed), `year` (launch year, from the first recorded token transfer), `solc_minor` (minor version of the Solidity compiler), and the 29 features. |
-| `data/D_main_era_matched.csv` | Secondary dataset with the same columns, including multi-file contracts (1,901 rug pull, 817 legitimate). |
+| `data/D_main_era_matched.csv` | Secondary dataset with the same columns, including multi-file contracts (1,901 rug pull, 818 legitimate). |
 | `data/addresses_rugpull_and_pilot_2475.csv` | Addresses of the rug pull class (2,372, `label` = 1) and of an earlier pilot set of 103 established tokens (`label` = 0). The pilot set was used only for design decisions. |
 | `data/legit_candidates_processed_886.csv` | The 886 candidate legitimate tokens that were processed (all tokens launched in 2021-2022 plus a random sample of 25 each from 2020 and 2023). Columns: `address`, `year`, `first_ts`, `last_ts`, `life_days`. |
 | `data/cand_span.csv` | First and last recorded token transfer (Unix time, seconds) of the CoinGecko candidate tokens. `last_ts` was collected only for tokens whose first transfer fell in 2020-2023. |
