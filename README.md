@@ -57,8 +57,6 @@ Code and derived data created by the authors are released under the MIT Licence 
 
 ## Contact
 
-## Contact
-
 Faza Aulia Fadjri  
 Department of Information Technology, State Islamic University Walisongo Semarang  
 Email: 23080960010@student.walisongo.ac.id
