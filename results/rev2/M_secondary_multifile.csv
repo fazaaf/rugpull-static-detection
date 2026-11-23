@@ -1,0 +1,2 @@
+n_rug,n_legit,feature_clusters,mcc,spec,rec,roc_auc
+1901,818,1081,0.892 ± 0.035,0.941 ± 0.022,0.957 ± 0.024,0.986 ± 0.009
