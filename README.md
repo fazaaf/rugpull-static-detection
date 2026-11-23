@@ -17,7 +17,7 @@ The study asks how well features computed only from verified source code separat
 | `docs/feature_definitions.csv` | Definition of the 29 features, including every regular expression. |
 | `notebooks/pipeline_final.ipynb` | Original data construction and analyses (Colab), outputs removed. |
 | `notebooks/rev2_analyses.ipynb`, `notebooks/rev2lib.py` | Revision analyses run in Colab: re-running Slither with full detector output, detector composition and compiler dependence, enriched metadata baseline, exact duplicates and source-similarity grouping, regex variants V0-V4, activity thresholds, the audit evidence, and the export of `groups.csv`. Outputs removed. `rev2lib.py` holds the helper functions; those marked VERBATIM are copied unchanged from `pipeline_final.ipynb`. |
-| `scripts/` | Revision analyses that run on the released data without Colab or an API key (`s1_cv.py` cross-validation and in-fold thresholds, `s2_analyses.py` label sources, compiler strata, calibration, descriptives, activity thresholds, `s3_shap.py` SHAP and stability, `s4_local.py` type sensitivity, random-forest SHAP, SHAP by compiler, perturbation, `s5_collect.py` collects the outputs). |
+| `scripts/` | Revision analyses that run on the released data without Colab or an API key (`s1_cv.py` cross-validation and in-fold thresholds, `s2_analyses.py` label sources, compiler strata, calibration, descriptives, activity thresholds, `s3_shap.py` SHAP and stability, `s4_local.py` type sensitivity, random-forest SHAP, SHAP by compiler, perturbation, `s5_collect.py` collects the outputs, `s6_secondary_multifile.py` secondary analysis including multi-file contracts). |
 | `results/oof_xgb_final.csv`, `results/shap_importance_final.csv`, `results/versions.txt` | Outputs of the original pipeline (`arah_korelasi` = correlation between feature value and SHAP value; positive = toward rug pull). |
 | `results/rev2/` | Outputs of the revision: `rev2_colab_results.xlsx` (from the Colab notebook), `rev2_analyses.xlsx` and CSV files (from `scripts/`), and the calibration and SHAP dependence figures. |
 | `annotation/` | Manual validation of the regular-expression indicators: `regex_annotation_sheet.xlsx` (tabs `codebook`, `annotate`, `rule_decisions` in English and `keputusan_aturan`, the original Indonesian record), `annotation_key.csv` (labels and regex output V0-V3 for the 61 contracts; C01 was a training example), `regex_V4_flags.csv`, `contracts/` (verified source of the 61 annotated contracts as published on Etherscan), `score_annotation.py`, and its output `annotation_validation_results.xlsx`. |
@@ -36,7 +36,7 @@ The address list of the rug pull class has 2,372 entries: 2,302 of the 2,303 Eth
 1. **Without Colab or an API key** (about two minutes on a laptop):
    ```bash
    pip install -r requirements.txt
-   python scripts/s1_cv.py && python scripts/s2_analyses.py && python scripts/s3_shap.py && python scripts/s4_local.py && python scripts/s5_collect.py
+   python scripts/s1_cv.py && python scripts/s2_analyses.py && python scripts/s3_shap.py && python scripts/s4_local.py && python scripts/s5_collect.py && python scripts/s6_secondary_multifile.py
    python annotation/score_annotation.py
    ```
    `s1_cv.py` checks that its out-of-fold predictions match `results/oof_xgb_final.csv` (maximum absolute difference below 1e-6).
