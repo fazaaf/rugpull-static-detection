@@ -1,0 +1,5 @@
+,0
+spearman_all29,0.972 (min 0.965)
+kendall_top10,0.882 (min 0.778)
+jaccard_top5,1.00 (min 1.00)
+per_contract_top3_overlap,0.718

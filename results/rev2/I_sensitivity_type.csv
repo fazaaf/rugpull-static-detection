@@ -1,0 +1,4 @@
+set,mcc,spec,rec,pr_auc_legit,roc,n_rug,n_legit
+Primary (all rug pulls),0.840 ± 0.043,0.897 ± 0.052,0.961 ± 0.020,0.938 ± 0.025,0.982 ± 0.010,1864,414
+Transaction Limitation + Fee only,0.859 ± 0.058,0.913 ± 0.036,0.963 ± 0.027,0.945 ± 0.027,0.981 ± 0.014,1829,414
+Transaction Limitation only,0.897 ± 0.037,0.932 ± 0.034,0.974 ± 0.016,0.964 ± 0.025,0.990 ± 0.007,1674,414

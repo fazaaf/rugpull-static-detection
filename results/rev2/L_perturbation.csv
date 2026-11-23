@@ -1,0 +1,6 @@
+scenario,rug_recall
+S0 unchanged,0.961 ± 0.020
+S1 optimization findings removed,0.357 ± 0.157
+"S2 padding (+10 functions, +50% length)",0.947 ± 0.035
+S3 structure set to legitimate median,0.767 ± 0.148
+S4 = S1 + S3,0.070 ± 0.039
